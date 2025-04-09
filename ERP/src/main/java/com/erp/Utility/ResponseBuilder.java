@@ -13,7 +13,7 @@ public class ResponseBuilder {
                 .data(data)
                 .build();
 
-        return ResponseEntity.status(HttpStatus.CREATED)
+        return ResponseEntity.status(status)
                 .body(structure);
     }
 
@@ -24,7 +24,7 @@ public class ResponseBuilder {
                 .data(data)
                 .build();
 
-        return ResponseEntity.status(HttpStatus.CREATED)
+        return ResponseEntity.status(status)
                 .body(listResponseStructure);
     }
 

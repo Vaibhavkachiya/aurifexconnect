@@ -33,7 +33,7 @@ public class AppDoc {
                        - Java 8
                        - Spring Boot
                        - Spring Data JPA
-                       - MySQL Databse
+                       - MySQL Database
                         """)
                 .version("v1")
                 .contact(contact());
