@@ -8,10 +8,10 @@ import com.register.usermanagement.util.ResponseBuilder;
 import com.register.usermanagement.util.ResponseStructure;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -28,7 +28,7 @@ public class UserController {
     // Create User API
     @PostMapping
     @Operation(summary = "Create User")
-    public ResponseEntity<ResponseStructure<UserResponse>> createUser(@RequestBody UserRequest userRequest) {
+    public ResponseEntity<ResponseStructure<UserResponse>> createUser(@Valid @RequestBody UserRequest userRequest) {
         UserResponse userResponse = userService.createUser(userRequest);
         return ResponseBuilder.success(HttpStatus.CREATED, "User Created Successfully", userResponse);
     }

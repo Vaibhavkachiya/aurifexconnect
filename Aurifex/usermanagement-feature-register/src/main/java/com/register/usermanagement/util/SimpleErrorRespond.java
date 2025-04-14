@@ -1,5 +1,6 @@
 package com.register.usermanagement.util;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.experimental.SuperBuilder;
 
